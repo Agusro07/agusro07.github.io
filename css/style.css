@@ -1,0 +1,249 @@
+/* Estilo General */
+body {
+    background-color: #121212; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+.title-box {
+    display: inline-block; /* La caja se ajusta al contenido */
+    background-color: #1e1e1e; /* Fondo oscuro */
+    border: 3px solid #00bcd4; /* Borde cyan */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 0.5rem 1rem; /* Espaciado interno alrededor de la palabra */
+    margin: 2rem auto; /* Centrado vertical y horizontal */
+    text-align: center; /* Centra el contenido dentro de la caja */
+}
+
+.title-box h2 {
+    margin: 0; /* Quita márgenes internos del h2 */
+    color: #fff; /* Color del texto */
+    font-size: 2rem; /* Tamaño del texto */
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: #343a40; /* Fondo oscuro */
+    position: fixed; /* Navbar fija */
+    top: 0;
+    width: 100%;
+    z-index: 1030; /* Para mantener la navbar sobre otros elementos */
+    border-radius: 30px;
+    border: 3px solid #00bcd4; /* Borde cyan como el de las imágenes */
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #00bcd4 !important; /* Cyan en el link activo */
+}
+
+/* Ajuste del contenido para la navbar fija */
+.container {
+    margin-top: 80px; /* Espacio superior para evitar solapamiento */
+}
+
+/* Títulos */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00bcd4; /* Cyan para títulos */
+}
+
+/* Sección de Libros */
+.content-box {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 3px solid #00bcd4; /* Bordes cyan */
+}
+
+.boxtext {
+    padding: 3rem;
+    background-color: #1e1e1e;
+    border: 2px solid #00bcd4; /* Bordes cyan */
+}
+
+.boxtext h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.imgflex {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.booksize {
+    width: auto;
+    height: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #00bcd4; /* Bordes cyan */
+}
+
+.booksize:hover {
+    transform: scale(1.1); /* Efecto hover de agrandado */
+    border: 2px solid #fff; /* Bordes blancos al hacer hover */
+}
+
+/* Clase para imágenes de destacados */
+.featured-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain; /* Para mostrar la imagen completa */
+    border-radius: 10px;
+    border: 2px solid #00bcd4;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.featured-img:hover {
+    transform: scale(1.05); /* Pequeño aumento en el tamaño */
+    border-color: #fff; /* Cambia el borde a blanco */
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3); /* Agrega sombra ligera */
+}
+
+/* Cards autoajustables */
+.auto-card {
+    display: flex;
+    flex-direction: column; /* Coloca imagen y texto en columna */
+    align-items: center; /* Centra el contenido */
+    width: fit-content; /* Ajusta al tamaño de su contenido */
+    max-width: 100%; /* Limita a 100% para evitar desbordamiento */
+    padding: 10px; /* Espaciado interno compacto */
+    border-radius: 10px;
+    margin: 0 auto; /* Centra las cards */
+}
+
+.auto-card .card-body {
+    text-align: center; /* Centra el texto */
+    padding: 1rem;
+    width: 100%; /* Hace que el cuerpo de la card tenga el mismo ancho que la imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Limita el ancho del texto dentro de la card */
+.auto-card .card-body p {
+    max-width: 250px; /* Limita el ancho del texto */
+    margin: 0 auto; /* Centra el texto */
+}
+
+a h3 {
+    text-align: center;
+    margin-top: 1rem;
+    color: #00bcd4; /* Títulos de los libros en cyan */
+    text-decoration: none;
+}
+
+a h3:hover {
+    color: #fff;
+}
+
+/* Descripción de libros destacados */
+.destimg {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.image-container {
+    margin-right: 2rem;
+}
+
+.text-container {
+    max-width: 600px;
+}
+
+.text-container p {
+    font-size: 1.1rem;
+    color: #bbb; /* Color gris claro para el texto */
+}
+
+/* Barra de búsqueda */
+form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+input.form-control {
+    border-radius: 20px;
+    background-color: #2c2c2c;
+    border: 1px solid #00bcd4;
+    color: #fff;
+}
+
+button[type="submit"] {
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0097a7;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    background-color: #343a40; /* Color de fondo de la navbar */
+    border: none; /* Quitar bordes si es necesario */
+}
+
+.dropdown-menu .dropdown-item {
+    color: #ffffff; /* Color del texto */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #495057; /* Color al pasar el cursor */
+    color: #ffffff; /* Mantener el texto legible */
+}
+
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .featured-img {
+        max-height: 250px; /* Reduce la altura en pantallas más pequeñas */
+    }
+    
+    .auto-card .card-body p {
+        max-width: 200px; /* Ajusta el ancho máximo del texto en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-img {
+        max-height: 150px; /* Reducción adicional de altura en pantallas más pequeñas */
+    }
+    
+    .auto-card .card-body p {
+        max-width: 180px; /* Ajusta aún más el texto en pantallas pequeñas */
+    }
+}
